@@ -1,0 +1,2 @@
+const funny=[{"error":false,"results":[{"_id":"57c836d2421aa97cb162d8b5","created_at":"2016-09-01T22:10:26.159Z","icon":"http://ww3.sinaimg.cn/large/0066P23Wjw1f7efvvjy5qj301n01n741.jpg","id":"jandan","title":"\u714e\u86cb"},{"_id":"57c83740421aa97cada9b79b","created_at":"2016-09-01T22:12:16.52Z","icon":"http://ww2.sinaimg.cn/large/610dc034jw1f7ehs6h7loj2050050t8r.jpg","id":"hereinuk","title":"\u82f1\u56fd\u90a3\u4e9b\u4e8b\u513f"}]}]
+export default funny

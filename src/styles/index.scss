@@ -1,0 +1,103 @@
+
+
+@import "common";
+@import "animate.css";
+@import "fonts/iconfont.css";
+@import "antd-mobile.css";
+// @import "bee-mobile.css";
+
+$base_font:20px;
+$base_color:#333;
+
+// 全局样式  golbal 
+html,body,#app,.box{
+    width:100vw;
+    height:100vh;
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+* { touch-action: pan-y; } 
+.move-in{
+    animation: zoomInDown .9s;
+}
+
+.move-out{
+    animation: zoomOutDown .9s;
+}
+
+
+
+.headline {
+    border-bottom: 8px solid #f6f6f6;
+}
+.question {
+    overflow: hidden;
+    padding: 0 40px!important;
+}
+.question-title {
+    color: #494b4d;
+    line-height: 1.4rem;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 40px 0;
+}
+.meta {
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    color: #b8b8b8;
+}
+.meta .avatar, .comment-meta .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.meta .author {
+    color: #444;
+    font-weight: 700;
+}
+.content {
+    color: #444;
+    line-height: 0.6rem;
+    font-size: 0.3rem;
+    margin: 10px 0 20px;
+    
+}
+.meta .bio, .highlight .gh, .highlight .bp {
+    color: #999;
+}
+.meta span, .meta .source {
+    vertical-align: middle;
+}
+p {
+    margin: 30px 0 !important;
+
+}
+.content img {
+    max-width: 100%;
+    display: block;
+    margin: 30px auto;
+}
+
+.view-more {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.view-more a {
+    font-size: 32px;
+    display: inline-block;
+    width: 125px;
+    height: 30px;
+    line-height: 30px;
+    background: #f0f0f0;
+    color: #B8B8B8;
+    width: 100%;
+    display: block;
+    word-break: break-all;
+}
+
+
+
+

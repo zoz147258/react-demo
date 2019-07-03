@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="no-referrer" />
+    <title>新闻日报</title>
+    <link rel="stylesheet" href="https://zuozhaoxi.com/base/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1087982_4a029swhagh.css">
+    <script src="https://zuozhaoxi.com/base/swiper/js/swiper.js"></script>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <script type="text/javascript" charset="utf-8">
+        mui.init();
+    </script>
+    <script>
+        document.addEventListener("plusready", plusReady, false);
+        function plusReady() {
+            getAuthServices();
+            getShares()
+            startScan();
+        }
+        var auths = null;
+        // 获取第三方登录的服务列表 
+        function getAuthServices() {
+            plus.oauth.getServices((services) => {
+                auths = services;
+                console.log(JSON.stringify(auths));
+            }, (e) => {
+                plus.nativeUI.alert("获取登录授权服务列表失败：" + JSON.stringify(e));
+            })
+        }
+
+
+
+        var shares = null;
+        function getShares() {
+            plus.share.getServices(function (s) {
+                shares = s;
+                console.log(JSON.stringify(shares));
+            }, function (e) {
+                alert("获取分享服务列表失败：" + e.message);
+            });
+        }
+
+
+        //            var scan = null;
+        //            function startScan(){
+        // 	    		scan = new plus.barcode.Barcode('bcid');
+        // 	    		scan.start();
+        // 	    		scan.onmarked = function(type,result){
+        // 	    			var text = '未知: ';
+        // 					switch(type){
+        // 						case plus.barcode.QR:
+        // 						text = 'QR: ';
+        // 						break;
+        // 						case plus.barcode.EAN13:
+        // 						text = 'EAN13: ';
+        // 						break;
+        // 						case plus.barcode.EAN8:
+        // 						text = 'EAN8: ';
+        // 						break;
+        // 					}
+        // 					alert( text+result );
+        // //					location.href =
+        // 					mui.openWindow({
+        // 						url:result
+        // 					})
+        // 	    		}
+        // 	    	}
+        var scan = null;
+        function startScan() {
+            scan = new plus.barcode.Barcode('bcid');
+            scan.start();
+            scan.onmarked = function (type, result) {
+                var text = '未知: ';
+                switch (type) {
+                    case plus.barcode.QR:
+                        text = 'QR: ';
+                        break;
+                    case plus.barcode.EAN13:
+                        text = 'EAN13: ';
+                        break;
+                    case plus.barcode.EAN8:
+                        text = 'EAN8: ';
+                        break;
+                }
+                alert(text + result);
+                //					location.href =
+                mui.openWindow({
+                    url: result
+                })
+            }
+        }
+
+    </script>
+
+<link href="css/app.607b5fe9.css" rel="stylesheet"></head>
+
+<body>
+    <div id="app">
+
+    </div>
+<script type="text/javascript" src="js/main.607b5fe9.js"></script></body>
+
+</html>
